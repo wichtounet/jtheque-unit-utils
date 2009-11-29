@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.jtheque</groupId>
+        <artifactId>jtheque-utilities</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>file-unit</artifactId>
+    <packaging>jar</packaging>
+    <name>File Unit</name>
+    <version>1.0</version>
+
+    <ciManagement>
+        <system>TeamCity 4.5.4</system>
+        <url>http://wichtounet.homedns.org:8080/hudson/</url>
+    </ciManagement>
+
+    <issueManagement>
+        <system>Redmine</system>
+        <url>http://projets.developpez.com/projects/file-unit/issues</url>
+    </issueManagement>
+
+    <scm>
+        <connection>scm:svn:http://subversion.developpez.com/projets/JTheque/utils/file-unit/</connection>
+        <url>http://subversion.developpez.com/projets/JTheque/utils/file-unit/</url>
+    </scm>
+
+    <build>
+        <directory>${env.BUILD_HOME}/utils/file-unit</directory>
+
+        <outputDirectory>${env.BUILD_HOME}/utils/file-unit/classes/production</outputDirectory>
+        <testOutputDirectory>${env.BUILD_HOME}/utils/file-unit/classes/test</testOutputDirectory>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>1.0-beta-5</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <reporting>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <configuration>
+                    <targetJdk>1.6</targetJdk>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <configuration>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>taglist-maven-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+    </reporting>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.4</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <sonar.dynamicAnalysis>true</sonar.dynamicAnalysis>
+    </properties>
+
+</project>
