@@ -4,9 +4,9 @@
     
     <groupId>org.jtheque</groupId>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>file-unit</artifactId>
+    <artifactId>org.jtheque.unit.utils</artifactId>
     <packaging>jar</packaging>
-    <name>File Unit</name>
+    <name>org.jtheque.unit.utils</name>
     <version>1.0</version>
 
     <ciManagement>
@@ -26,30 +26,22 @@
 
     <distributionManagement>
         <repository>
-            <id>jtheque-web-server</id>
-            <name>JTheque Repository Server</name>
-            <url>ftp://developpez.com/repository</url>
+            <id>Server-PC-releases</id>
+            <name>Server-PC-releases</name>
+            <url>http://wichtounet.homedns.org:8280/artifactory/libs-releases-local</url>
         </repository>
+        <snapshotRepository>
+            <id>Server-PC-snapshots</id>
+            <name>Server-PC-snapshots</name>
+            <url>http://wichtounet.homedns.org:8280/artifactory/libs-snapshots-local</url>
+    </snapshotRepository>
     </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>JTheque</id>
-            <url>http://jtheque.developpez.com/repository</url>
-        </repository>
-        <repository>
-            <id>Version99</id>
-            <name>Version 99 Does Not Exist Maven repository</name>
-            <layout>default</layout>
-            <url>http://no-commons-logging.zapto.org/mvn2</url>
-        </repository>
-    </repositories>
 
     <build>
         <directory>${env.BUILD_HOME}/utils/file-unit</directory>
 
-        <outputDirectory>${env.BUILD_HOME}/utils/file-unit/classes/production</outputDirectory>
-        <testOutputDirectory>${env.BUILD_HOME}/utils/file-unit/classes/test</testOutputDirectory>
+        <outputDirectory>${env.BUILD_HOME}/utils/unit-utils/classes/production</outputDirectory>
+        <testOutputDirectory>${env.BUILD_HOME}/utils/unit-utils/classes/test</testOutputDirectory>
 
         <plugins>
             <plugin>
@@ -153,13 +145,19 @@
             <version>4.4</version>
             <scope>compile</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>org.dbunit</groupId>
+            <artifactId>dbunit</artifactId>
+            <version>2.4.4</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
-
 
     <licenses>
         <license>
-            <name>GNU GPL V3</name>
-            <url>http://www.gnu.org/copyleft/gpl.html</url>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
