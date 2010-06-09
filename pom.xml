@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    
+
     <groupId>org.jtheque</groupId>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>org.jtheque.unit.utils</artifactId>
@@ -11,17 +11,12 @@
 
     <ciManagement>
         <system>Hudson</system>
-        <url>http://wichtounet.homedns.org:8080/hudson/</url>
+        <url>http://wichtounet.homedns.org:8280/hudson/</url>
     </ciManagement>
 
-    <issueManagement>
-        <system>Redmine</system>
-        <url>http://projets.developpez.com/projects/file-unit/issues</url>
-    </issueManagement>
-
     <scm>
-        <connection>scm:svn:http://wichtounet.homedns.org/svn/file-unit/</connection>
-        <url>http://wichtounet.homedns.org/svn/file-unit/</url>
+        <connection>scm:git:git://github.com/wichtounet/jtheque-unit-utils.git</connection>
+        <url>scm:git:git://github.com/wichtounet/jtheque-unit-utils.git</url>
     </scm>
 
     <distributionManagement>
@@ -34,7 +29,7 @@
             <id>Server-PC-snapshots</id>
             <name>Server-PC-snapshots</name>
             <url>http://wichtounet.homedns.org:8280/artifactory/libs-snapshots-local</url>
-    </snapshotRepository>
+        </snapshotRepository>
     </distributionManagement>
 
     <build>
@@ -145,7 +140,7 @@
             <version>4.4</version>
             <scope>compile</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.dbunit</groupId>
             <artifactId>dbunit</artifactId>
