@@ -33,11 +33,6 @@
     </distributionManagement>
 
     <build>
-        <directory>${env.BUILD_HOME}/utils/file-unit</directory>
-
-        <outputDirectory>${env.BUILD_HOME}/utils/unit-utils/classes/production</outputDirectory>
-        <testOutputDirectory>${env.BUILD_HOME}/utils/unit-utils/classes/test</testOutputDirectory>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
