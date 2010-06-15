@@ -34,8 +34,8 @@ import static org.junit.Assert.*;
  */
 
 /**
- * A Unit utility class to test file operations. This class is made to facilitate the tests of file operations on JUnit tests.
- * This class emulate a simple file system in a temporary folder.
+ * A Unit utility class to test file operations. This class is made to facilitate the tests of file operations on JUnit
+ * tests. This class emulate a simple file system in a temporary folder.
  *
  * @author Baptiste Wicht
  */
@@ -78,6 +78,7 @@ public final class FileUnit {
      * Return the <code>File</code> object of a path on the test file system.
      *
      * @param path The path on the test file system.
+     *
      * @return Return the corresponding <code>File</code> object.
      */
     public static File getFile(String path) {
@@ -89,6 +90,7 @@ public final class FileUnit {
      *
      * @param folder The path to the parent folder.
      * @param path   The path of the file.
+     *
      * @return The corresponding <code>File</code> object,
      */
     public static File getFile(String folder, String path) {
@@ -99,6 +101,7 @@ public final class FileUnit {
      * Return the real path of the path on the test file system.
      *
      * @param path The path on the test file system.
+     *
      * @return The corresponding path on the real file system.
      */
     public static String getPath(String path) {
@@ -110,6 +113,7 @@ public final class FileUnit {
      *
      * @param folder The path to the parent folder.
      * @param path   The path of the file.
+     *
      * @return The corresponding path on the real file system.
      */
     public static String getPath(String folder, String path) {
@@ -120,7 +124,9 @@ public final class FileUnit {
      * Return an <code>InputStream</code> to the path.
      *
      * @param path The path on the test file system.
+     *
      * @return The <code>InputStream</code> to the path. This stream is still buffered.
+     *
      * @see InputStream
      */
     public static InputStream getInputStream(String path) {
@@ -447,6 +453,7 @@ public final class FileUnit {
      * Return the content of the file in a String.
      *
      * @param file The file to get the content from.
+     *
      * @return The content of the file.
      */
     private static String getContent(File file) {

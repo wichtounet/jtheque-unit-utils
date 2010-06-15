@@ -12,6 +12,7 @@ import org.dbunit.operation.DatabaseOperation;
 import org.junit.Before;
 
 import javax.sql.DataSource;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -96,6 +97,7 @@ public abstract class AbstractDBUnitTest {
      * Return the table with the specified name.
      *
      * @param s The name of the table.
+     *
      * @return The table if found else null.
      */
     protected final ITable getTable(String s) {
@@ -114,6 +116,7 @@ public abstract class AbstractDBUnitTest {
      * @param table  The table.
      * @param pk     The primary key.
      * @param column The column.
+     *
      * @return The value.
      */
     protected Object getValue(String table, int pk, String column) {
@@ -130,6 +133,7 @@ public abstract class AbstractDBUnitTest {
      * Return the row count in the specified table.
      *
      * @param table The table to count the row.
+     *
      * @return The row count of the table.
      */
     protected int getRowCount(String table) {
@@ -150,6 +154,7 @@ public abstract class AbstractDBUnitTest {
      *
      * @param dataSet    The dataset.
      * @param connection The database connection.
+     *
      * @throws DataSetException If an error occurs during dataset reading.
      * @throws SQLException     If an error occurs during populating database.
      */
@@ -193,13 +198,14 @@ public abstract class AbstractDBUnitTest {
      * Resolve the DB type from the string.
      *
      * @param str The string value.
+     *
      * @return The DB type.
      */
     private static String resolveType(String str) {
         try {
-			Integer.parseInt(str);
+            Integer.parseInt(str);
 
-			return "int";
+            return "int";
         } catch (Exception e) {
             //Nothing to do here
         }
