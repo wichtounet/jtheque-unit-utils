@@ -1,0 +1,13 @@
+Download JTheque Unit Utils 1.0.0
+   
+   JTheque Unit Utils 1.0.0 is distributed under the {{{http://www.apache.org/licenses/LICENSE-2.0.html} Apache License, version 2}}.
+
+   You can download this library on the {{{http://github.com/wichtounet/jtheque-unit-utils} GitHub repository}}. 
+
+* System {Requirements}
+
+*----------------------+---------------------------------------------------------------------------------------------+
+| <<JRE>>              | 6.0 or above |
+*----------------------+---------------------------------------------------------------------------------------------+
+| <<Operating System>> | No minimum requirement. The library is multi-platform
+*----------------------+---------------------------------------------------------------------------------------------+

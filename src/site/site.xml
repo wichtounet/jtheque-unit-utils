@@ -1,0 +1,25 @@
+<project name="JTheque XML Utils">
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-stylus-skin</artifactId>
+        <version>1.0.1</version>
+    </skin>
+
+    <body>
+        <links>
+            <item name="baptiste-wicht.com" href="http://baptiste-wicht.com"/>
+            <item name="Maven" href="http://maven.apache.org"/>
+        </links>
+
+        <breadcrumbs>
+            <item name="JTheque" href="http://jtheque.baptiste-wicht.com"/>
+        </breadcrumbs>
+
+        <menu name="JTheque Unit Utils">
+            <item name="Overview" href="index.html"/>
+            <item name="Download" href="download.html"/>
+        </menu>
+
+        <menu ref="reports"/>
+    </body>
+</project>

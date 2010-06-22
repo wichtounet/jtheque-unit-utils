@@ -9,17 +9,29 @@
     <name>org.jtheque.unit.utils</name>
     <version>1.0</version>
 
+    <url>http://github.com/wichtounet/jtheque-unit-utils</url>
+
     <ciManagement>
         <system>Hudson</system>
         <url>http://wichtounet.homedns.org:8280/hudson/</url>
     </ciManagement>
 
+    <issueManagement>
+        <system>GitHub</system>
+        <url>http://github.com/wichtounet/jtheque-unit-utils/issues</url>
+	</issueManagement>
+
     <scm>
+        <url>http://github.com/wichtounet/jtheque-unit-utils</url>
         <connection>scm:git:git://github.com/wichtounet/jtheque-unit-utils.git</connection>
-        <url>scm:git:git://github.com/wichtounet/jtheque-unit-utils.git</url>
     </scm>
 
     <distributionManagement>
+        <site>
+            <id>bw-web-server</id>
+            <name>BW FTP Server</name>
+            <url>ftp://baptiste-wicht.com/jtheque/unit-utils</url>
+        </site>
         <repository>
             <id>Server-PC-releases</id>
             <name>Server-PC-releases</name>
@@ -88,6 +100,14 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                    <locales>en</locales>
+                </configuration>
+            </plugin>
         </plugins>
 
         <extensions>
@@ -101,7 +121,6 @@
 
     <reporting>
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -124,7 +143,6 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>taglist-maven-plugin</artifactId>
             </plugin>
-
         </plugins>
     </reporting>
 
@@ -154,7 +172,7 @@
 
     <organization>
         <name>JTheque</name>
-        <url>http://jtheque.developpez.com</url>
+        <url>http://jtheque.baptiste-wicht.com</url>
     </organization>
 
     <developers>
